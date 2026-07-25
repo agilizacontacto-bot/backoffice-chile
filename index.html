@@ -80,6 +80,7 @@
             font-weight: bold;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: background 0.3s;
+            display: inline-block;
         }
         .btn:hover {
             background: #e0a800;
@@ -138,6 +139,11 @@
             padding: 50px;
             max-width: 700px;
             margin: 0 auto;
+            text-align: center;
+        }
+        .contact-form {
+            text-align: left;
+            margin-top: 30px;
         }
         .form-group {
             margin-bottom: 20px;
@@ -156,6 +162,21 @@
         }
         .form-group textarea {
             height: 120px;
+        }
+        .direct-email {
+            background: var(--accent);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .direct-email a {
+            color: var(--primary);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .direct-email a:hover {
+            text-decoration: underline;
         }
         footer {
             background: var(--dark);
@@ -222,7 +243,7 @@
             <tbody>
                 <tr>
                     <td><strong>Administración y Finanzas</strong></td>
-                    <td>Conciliación bancaria, control de flujos de caja, emisión de facturas y cobranza preventiva.</td>
+                    <td>Conciliación bancaria, control de flujos de caja, emisión de the facturas y cobranza preventiva.</td>
                 </tr>
                 <tr>
                     <td><strong>Recursos Humanos y Remuneraciones</strong></td>
@@ -239,10 +260,17 @@
     <section id="contacto" class="container">
         <div class="section-title">
             <h2>Hablemos de tu Negocio</h2>
-            <p>¿Listo para escalar sin fricciones administrativas? Déjanos tus datos.</p>
+            <p>¿Listo para escalar sin fricciones administrativas? Escríbenos directamente o déjanos tus datos.</p>
         </div>
         <div class="contact-section">
-            <form action="#" method="POST">
+            <div class="direct-email">
+                📧 Escríbenos directo a nuestro correo:<br>
+                <a href="mailto:contacto@backofficechile.cl">contacto@backofficechile.cl</a>
+            </div>
+            
+            <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 10px;">O completa el formulario para que te contactemos:</p>
+
+            <form class="contact-form" action="https://formspree.io/f/tu-codigo-aqui" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
@@ -265,7 +293,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 BackofficeChile SpA. Todos los derechos reservados. Hecho para PyMEs en Chile.</p>
+        <p>&copy; 2026 BackofficeChile SpA. Todos los derechos reservados. Contacto: contacto@backofficechile.cl</p>
     </footer>
 
 </body>
